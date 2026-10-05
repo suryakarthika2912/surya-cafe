@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F5EE;
+    color: #231C18;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom subtle parchment texture & shadows */
+.bg-parchment {
+  background-color: #F8F5EE;
+}
+
+.bg-warm-surface {
+  background-color: #F1ECE1;
+}
+
+.bg-espresso {
+  background-color: #1E1714;
+}
+
+.text-espresso {
+  color: #1E1714;
+}
+
+.border-warm-border {
+  border-color: rgba(35, 28, 24, 0.1);
+}
+
+/* Custom scrollbar for menu & cart */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1ECE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEBE;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B6A794;
+}

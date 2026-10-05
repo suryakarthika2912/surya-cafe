@@ -1,0 +1,342 @@
+import { MenuItem, BrewGuide } from '../types/coffee';
+
+export const HERO_IMAGE = '/src/assets/images/hero_coffee_latte_art_1791180801699.jpg';
+export const POUROVER_IMAGE = '/src/assets/images/coffee_pourover_v60_1791180813405.jpg';
+export const BEANS_IMAGE = '/src/assets/images/coffee_beans_roast_1791180825578.jpg';
+export const BAKERY_IMAGE = '/src/assets/images/cafe_bakery_pastries_1791180836557.jpg';
+
+export const MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'miso-caramel-latte',
+    name: 'Cardamom Miso Salted Caramel Latte',
+    japaneseSubtitle: '白味噌キャラメルラテ',
+    category: 'signature',
+    price: 7.25,
+    description: 'Double shot of house espresso, organic oat milk, house-simmered white miso salted caramel, and cracked green cardamom.',
+    origin: 'Huila, Colombia & Sidamo, Ethiopia blend',
+    tastingNotes: ['Umami Butter', 'Sea Salt', 'Toasted Cardamom', 'Vanilla Orchid'],
+    roastLevel: 'Medium-Light',
+    image: HERO_IMAGE,
+    isSignature: true,
+    customizable: true,
+  },
+  {
+    id: 'velvet-flat-white',
+    name: 'Velvet Flat White',
+    japaneseSubtitle: 'ベルベットフラットホワイト',
+    category: 'espresso',
+    price: 5.75,
+    description: 'A tight double ristretto folded into dense microfoam with a silky glass-like texture and sweet caramel notes.',
+    origin: 'Cerrado Mineiro, Brazil & Yirgacheffe, Ethiopia',
+    tastingNotes: ['Dark Chocolate', 'Toffee Crisp', 'Roasted Hazelnut'],
+    roastLevel: 'Medium',
+    image: HERO_IMAGE,
+    customizable: true,
+  },
+  {
+    id: 'kyoto-slow-drip',
+    name: '12-Hour Kyoto Slow Drip Cold Brew',
+    japaneseSubtitle: '京都式水出し珈琲',
+    category: 'signature',
+    price: 6.80,
+    description: 'Extracted drop-by-drop through towering handblown glass columns over 12 hours. Served chilled over clear hand-carved ice sphere.',
+    origin: 'Antioquia, Colombia Geisha lot',
+    tastingNotes: ['Cognac Warmth', 'Black Cherry', 'Cacao Nibs', 'Tobacco Leaf'],
+    roastLevel: 'Light',
+    image: POUROVER_IMAGE,
+    isSignature: true,
+    customizable: true,
+  },
+  {
+    id: 'ethiopia-yirgacheffe-filter',
+    name: 'Ethiopia Yirgacheffe Gedeb (Pour-Over)',
+    japaneseSubtitle: 'イルガチェフェ・ゲデブ',
+    category: 'filter',
+    price: 6.50,
+    description: 'Single-origin heirloom coffee brewed manually on Hario V60 dripper. Bright, tea-like floral clarity with delicate sparkling acidity.',
+    origin: 'Gedeb District, Yirgacheffe (1,950–2,200 MASL)',
+    process: 'Natural Sun-Dried on Raised African Beds',
+    tastingNotes: ['Bergamot Blossom', 'White Peach', 'Jasmine Flower', 'Meyer Lemon'],
+    roastLevel: 'Light',
+    elevation: '2,100m',
+    image: POUROVER_IMAGE,
+    isSeasonal: true,
+    customizable: true,
+  },
+  {
+    id: 'colombia-geisha-filter',
+    name: 'Colombia Finca El Paraiso Geisha',
+    japaneseSubtitle: 'コロンビア・ゲイシャ',
+    category: 'filter',
+    price: 8.50,
+    description: 'Rare thermal-shock anaerobic processed Geisha lot. Unbelievable aromatic complexity with tropical stone fruit and effervescence.',
+    origin: 'Cauca, Colombia (2,050 MASL)',
+    process: 'Anaerobic Fermentation with Thermal Shock',
+    tastingNotes: ['Lychee Fruit', 'Strawberry Jam', 'Rose Water', 'Earl Grey Tea'],
+    roastLevel: 'Light',
+    elevation: '2,050m',
+    image: POUROVER_IMAGE,
+    isSeasonal: true,
+    customizable: true,
+  },
+  {
+    id: 'single-origin-cortado',
+    name: 'Single Origin Cortado (1:1 Ratio)',
+    japaneseSubtitle: 'シングルオリジン・コルタド',
+    category: 'espresso',
+    price: 5.25,
+    description: 'Equal parts single-origin espresso and lightly textured steamed milk, served in a 4.5oz fluted Gibraltar glass.',
+    origin: 'Tarrazú, Costa Rica Honey Process',
+    tastingNotes: ['Brown Sugar', 'Candied Orange Peel', 'Almond Butter'],
+    roastLevel: 'Medium-Light',
+    image: HERO_IMAGE,
+    customizable: true,
+  },
+  {
+    id: 'cascara-orange-tonic',
+    name: 'Cascara Sparkling Citrus Tonic',
+    japaneseSubtitle: 'カスカラ・スパークリング',
+    category: 'signature',
+    price: 6.50,
+    description: 'Sun-dried coffee cherry infusion with cold-pressed Valencia orange, artisanal botanical tonic, and fresh rosemary sprig.',
+    origin: 'Finca Las Lajas, Costa Rica',
+    tastingNotes: ['Hibiscus Tartness', 'Dried Cranberry', 'Citrus Zest', 'Wild Honey'],
+    roastLevel: 'Light',
+    image: POUROVER_IMAGE,
+    customizable: true,
+  },
+  {
+    id: 'cardamom-twist-bun',
+    name: 'Swedish Cardamom Twist (Kardemummabulle)',
+    japaneseSubtitle: 'スウェーデン風カルダモンロール',
+    category: 'bakery',
+    price: 5.20,
+    description: 'Traditional slow-fermented buttery braided dough layered with freshly mortar-ground green cardamom and crunchy Swedish pearl sugar.',
+    tastingNotes: ['Aromatic Cardamom', 'Cultured Butter', 'Caramelized Crust'],
+    dietary: ['Vegetarian'],
+    image: BAKERY_IMAGE,
+    isSeasonal: true,
+    customizable: false,
+  },
+  {
+    id: 'twice-baked-almond-croissant',
+    name: 'Twice-Baked Almond Croissant',
+    japaneseSubtitle: 'アーモンドクロワッサン',
+    category: 'bakery',
+    price: 5.95,
+    description: 'Flaky 72-hour laminated French pastry filled with rich vanilla almond frangipane, topped with toasted sliced almonds and powdered sugar.',
+    tastingNotes: ['Vanilla Bean', 'Toasted Almond Frangipane', 'Buttery Flakes'],
+    dietary: ['Vegetarian'],
+    image: BAKERY_IMAGE,
+    customizable: false,
+  },
+  {
+    id: 'burnt-basque-espresso-cheesecake',
+    name: 'Espresso-Infused Basque Burnt Cheesecake',
+    japaneseSubtitle: 'エスプレッソバスクチーズケーキ',
+    category: 'bakery',
+    price: 7.00,
+    description: 'Caramelized crust with a molten, velvety center steeped in our house espresso reduction. Dusted with smoked Maldon sea salt.',
+    tastingNotes: ['Smoked Caramel', 'Espresso Crema', 'Creamy Custard'],
+    dietary: ['Vegetarian', 'Gluten-Friendly'],
+    image: BAKERY_IMAGE,
+    isSignature: true,
+    customizable: false,
+  },
+  {
+    id: 'beans-morning-sun-blend',
+    name: 'Whole Bean: "Morning Sun" House Blend',
+    japaneseSubtitle: 'アトリエ特製ハウスブレンド (250g / 1kg)',
+    category: 'beans',
+    price: 19.50,
+    description: 'Our flagship roastery blend crafted for daily espresso and filter lovers alike. Smooth, sweet chocolate mouthfeel with crisp candied citrus.',
+    origin: 'Cerrado, Brazil (60%) + Huila, Colombia (40%)',
+    tastingNotes: ['Milk Chocolate', 'Pecan Praline', 'Orange Zest', 'Molasses'],
+    roastLevel: 'Medium',
+    elevation: '1,400–1,850m',
+    image: BEANS_IMAGE,
+    isBeanBag: true,
+    customizable: true,
+  },
+  {
+    id: 'beans-geisha-reserve',
+    name: 'Whole Bean: Geisha Lot 04 Rare Reserve',
+    japaneseSubtitle: 'ゲイシャ・リザーブ豆 (250g)',
+    category: 'beans',
+    price: 32.00,
+    description: 'Micro-lot produced by third-generation growers in Boquete, Panama. Roasted on custom vintage 1968 Probat in 4kg batches.',
+    origin: 'Boquete, Panama (1,800 MASL)',
+    process: 'Washed Jasmine Extended Fermentation',
+    tastingNotes: ['Jasmine Bloom', 'Papaya Nectar', 'Bergamot Tea', 'Wild Honey'],
+    roastLevel: 'Light',
+    elevation: '1,800m',
+    image: BEANS_IMAGE,
+    isBeanBag: true,
+    customizable: true,
+  }
+];
+
+export const BREW_GUIDES: BrewGuide[] = [
+  {
+    id: 'v60',
+    name: 'Hario V60',
+    device: 'Conical Ceramic Filter',
+    ratio: 16, // 1:16 ratio
+    defaultDose: 15,
+    tempC: 93,
+    grindName: 'Medium-Fine',
+    grindMicrons: '600–700 µm · 14 Clicks Comandante',
+    totalTimeSeconds: 195, // 3:15
+    steps: [
+      {
+        time: '0:00 - 0:45',
+        secondStart: 0,
+        title: 'The Bloom Phase',
+        instruction: 'Pour 3x coffee weight in gentle concentric spirals from center outwards. Swirl gently to saturate all grounds evenly.',
+        waterTargetGrams: (dose) => dose * 3,
+      },
+      {
+        time: '0:45 - 1:30',
+        secondStart: 45,
+        title: 'First Main Infusion',
+        instruction: 'Pour continuous steady stream until reaching 60% of total target water weight. Keep water level stable.',
+        waterTargetGrams: (dose) => Math.round(dose * 16 * 0.6),
+      },
+      {
+        time: '1:30 - 2:15',
+        secondStart: 90,
+        title: 'Final Pour & Swirl',
+        instruction: 'Top up water gently to final brew weight. Give one single gentle swirl to wash down stray grounds from paper walls.',
+        waterTargetGrams: (dose) => dose * 16,
+      },
+      {
+        time: '2:15 - 3:15',
+        secondStart: 135,
+        title: 'Gravity Drawdown',
+        instruction: 'Allow bed to draw down completely flat with an even, sandy coffee bed. Serve immediately in warm ceramic carafe.',
+        waterTargetGrams: (dose) => dose * 16,
+      }
+    ]
+  },
+  {
+    id: 'chemex',
+    name: 'Chemex 6-Cup',
+    device: 'Bonded Triple-Fold Filter',
+    ratio: 15,
+    defaultDose: 30,
+    tempC: 94,
+    grindName: 'Medium-Coarse',
+    grindMicrons: '850–1000 µm · 24 Clicks',
+    totalTimeSeconds: 270, // 4:30
+    steps: [
+      {
+        time: '0:00 - 0:50',
+        secondStart: 0,
+        title: 'Thick Paper Bloom',
+        instruction: 'Saturate thick bonded paper grounds with 90g water. Allow sweet aromatic CO2 bubbles to bloom without agitation.',
+        waterTargetGrams: (dose) => dose * 3,
+      },
+      {
+        time: '0:50 - 2:00',
+        secondStart: 50,
+        title: 'Center Spiral Pour',
+        instruction: 'Pour in steady spirals, keeping spout low to avoid splashing. Bring weight to 250g.',
+        waterTargetGrams: (dose) => Math.round(dose * 15 * 0.55),
+      },
+      {
+        time: '2:00 - 3:30',
+        secondStart: 120,
+        title: 'Final Weight Pulse',
+        instruction: 'Slowly pulse-pour remaining water to total weight. Avoid pouring directly onto sides of the glass neck.',
+        waterTargetGrams: (dose) => dose * 15,
+      },
+      {
+        time: '3:30 - 4:30',
+        secondStart: 210,
+        title: 'Crystal Drawdown',
+        instruction: 'Wait for coffee to filter through heavy paper, yielding an exceptionally clean, sparkling, sediment-free cup.',
+        waterTargetGrams: (dose) => dose * 15,
+      }
+    ]
+  },
+  {
+    id: 'aeropress',
+    name: 'AeroPress Inverted',
+    device: 'Pressurized Micro-Filter',
+    ratio: 12,
+    defaultDose: 16,
+    tempC: 88,
+    grindName: 'Fine-Medium',
+    grindMicrons: '500–600 µm',
+    totalTimeSeconds: 135, // 2:15
+    steps: [
+      {
+        time: '0:00 - 0:30',
+        secondStart: 0,
+        title: 'Inverted Infusion',
+        instruction: 'Position AeroPress upside down. Add freshly ground coffee and pour all 192g water at 88°C in 20 seconds.',
+        waterTargetGrams: (dose) => dose * 12,
+      },
+      {
+        time: '0:30 - 1:15',
+        secondStart: 30,
+        title: 'Agitation & Cap Seal',
+        instruction: 'Stir back and forth 5 times with paddle. Screw on rinsed filter cap and expel trapped air gently.',
+        waterTargetGrams: (dose) => dose * 12,
+      },
+      {
+        time: '1:15 - 2:00',
+        secondStart: 75,
+        title: 'Smooth Plunge',
+        instruction: 'Flip onto server and plunge slowly for 35–45 seconds with steady forearm pressure until the first soft hiss.',
+        waterTargetGrams: (dose) => dose * 12,
+      }
+    ]
+  },
+  {
+    id: 'french-press',
+    name: 'French Press (Immersion)',
+    device: 'Stainless Steel Mesh Pot',
+    ratio: 15,
+    defaultDose: 30,
+    tempC: 96,
+    grindName: 'Coarse Sea Salt',
+    grindMicrons: '1100–1300 µm',
+    totalTimeSeconds: 300, // 5:00
+    steps: [
+      {
+        time: '0:00 - 1:00',
+        secondStart: 0,
+        title: 'Total Immersion Fill',
+        instruction: 'Pour all boiling water vigorously over coarse coffee grounds to ensure full turbulent suspension.',
+        waterTargetGrams: (dose) => dose * 15,
+      },
+      {
+        time: '1:00 - 4:00',
+        secondStart: 60,
+        title: 'Crust Steep & Break',
+        instruction: 'Leave plunger off. At 4:00, gently break coffee crust on top with a spoon and scoop away any pale foam.',
+        waterTargetGrams: (dose) => dose * 15,
+      },
+      {
+        time: '4:00 - 5:00',
+        secondStart: 240,
+        title: 'Settle & Gentle Press',
+        instruction: 'Let fines settle to the bottom. Place plunger and press down with minimal force. Rich, viscous body.',
+        waterTargetGrams: (dose) => dose * 15,
+      }
+    ]
+  }
+];
+
+export const CAFE_HOURS = [
+  { day: 'Monday – Friday', hours: '07:00 – 18:00', roastSession: 'Batch Roasting 06:00 – 08:30' },
+  { day: 'Saturday & Sunday', hours: '08:00 – 19:00', roastSession: 'Public Cuppings 11:00 & 14:00' },
+];
+
+export const CAFE_LOCATION = {
+  address: '412 Kōhī Lane, Roastery Quarter, Kyoto Dist.',
+  subway: 'Gion-Shijo Station (Exit 3, 4 min walk)',
+  phone: '+81 (75) 882-0194',
+  email: 'concierge@atelierkohi.coffee',
+};

@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Kōhī | Artisanal Coffee Roasters",
+  "description": "An editorial specialty coffee roastery and atelier experience with handcrafted brew guides, origin tastings, and table reserves.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
